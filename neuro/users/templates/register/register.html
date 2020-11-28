@@ -1,0 +1,25 @@
+{% extends "main/main.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+        <div class="container">
+            <div class="main">
+                <p class="sign" align="center">Zaloguj się</p>
+                <form class="form1" method="POST">
+                    {% csrf_token %}
+                    {{ form }}
+                  <input class="un " type="text" align="center" placeholder="Login">
+                  <input class="un " type="text" align="center" placeholder="Login">
+
+                  <input class="pass" type="password" align="center" placeholder="Hasło">
+                  <button class="submit" align="center" type="submit">Zarejestruj się</button>
+                  <p class="sign" align="center" style="font-size: 20px;">Juz zarejestrowany? <a href="/">Zaloguj się</a></p>
+                   
+                </form>
+                <div class="text">
+                    <p></p>
+                </div>           
+                </div>
+        </div>
+   
+{% endblock content %}
